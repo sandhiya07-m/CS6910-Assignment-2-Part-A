@@ -80,3 +80,33 @@ A 10 x 3 grid of 30 test images with their true and predicted labels was generat
 - Torchvision
 - Google Colab
 - Weights & Biases
+
+## How to Run
+
+### Requirements
+
+- Python 3.x
+- PyTorch
+- Torchvision
+- NumPy
+- Matplotlib
+- Pillow
+- Weights & Biases
+- Google Colab with GPU recommended
+
+### Running the Notebook
+
+1. Open the `Copy_of_Untitled0.ipynb` notebook in Google Colab.
+2. Select a GPU runtime.
+3. Mount or provide the iNaturalist 12K dataset.
+4. Run the notebook cells in order.
+5. The original training data is divided into 80% training and 20% validation data.
+6. The separate held-out test data is used only for final evaluation.
+
+### Evaluation
+
+The best CNN configuration from the W&B sweep is retrained and evaluated on the held-out test set.
+
+Final test accuracy: **34.50%**
+
+Correct predictions: **690 / 2000**
